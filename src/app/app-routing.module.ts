@@ -16,10 +16,10 @@ const routes: Routes = [
   
   {
     path: '**',
-    redirectTo: '404',
+    redirectTo: '/404',
   },
   {
-    path: '/404',
+    path: '404',
     component: PgPageNotFoundComponent,
   }
 
