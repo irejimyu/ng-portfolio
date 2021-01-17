@@ -13,8 +13,13 @@ const routes: Routes = [
     path: 'sample',
     component: PgHomeComponent,
   },
+  
   {
     path: '**',
+    redirectTo: '404',
+  },
+  {
+    path: '/404',
     component: PgPageNotFoundComponent,
   }
 
