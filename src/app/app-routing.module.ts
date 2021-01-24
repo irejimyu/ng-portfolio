@@ -14,8 +14,13 @@ const routes: Routes = [
     path: 'contact',
     component: PgContactComponent,
   },
+  
   {
     path: '**',
+    redirectTo: '404',
+  },
+  {
+    path: '404',
     component: PgPageNotFoundComponent,
   },
 
