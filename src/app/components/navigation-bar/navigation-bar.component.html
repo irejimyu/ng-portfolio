@@ -1,0 +1,85 @@
+<header>
+    <nav class="nav-wrapper">
+        <ul class="navbar-nav">
+            <li class="navbar-nav__logo">
+                <a routerLink="/" class="nav-link">
+                    <!-- <svg viewBox="0 0 108.71 108.71">
+                        <g>
+                            <path fill="#42210b" d="M49.72 59.13l-9.7-16.45V95.3h13.1v-6.61h-3.4V59.13z" />
+                            <path fill="#29abe2" d="M53.12 41.77V13.84h-13.1v8.07h2.01l11.09 19.86z" />
+                            <path fill="#603813" d="M27.78 21.91l12.24 20.77V21.91H27.78z" />
+                            <path d="M66.01 29.3l-9.8 18.01-3.09-5.54v46.92h9.58V59.37L80.26 29.3H66.01z" />
+                            <path class="logo-color"
+                                d="M42.03 21.91h-2.01v20.77l9.7 16.45v29.56h3.4V41.77L42.03 21.91z" />
+                            <path d="M0 0v108.71h108.71V0zm102.09 102.09H6.62V6.62h95.47z" />
+                        </g>
+                    </svg> -->
+                    <!-- <svg viewBox="0 0 65.79 102.11">
+                        <g>
+                            <path d="M27.5 56.78L15.35 36.16v65.95h16.42v-8.28H27.5V56.78z" />
+                            <path d="M31.77 35.02V0H15.35v10.13h2.52l13.9 24.89z" />
+                            <path d="M0 10.13l15.35 26.03V10.13H0z" />
+                            <path d="M47.92 19.38L35.64 41.96l-3.87-6.94v58.81h12.01V57.07l22.01-37.69H47.92z" />
+                            <path class="logo-color"
+                                d="M17.87 10.13h-2.52v26.03L27.5 56.78v37.05h4.27V35.02l-13.9-24.89z" />
+                        </g>
+                    </svg> -->
+
+                    <span>IREJIM YU</span>
+                </a>
+            </li>
+
+            <li (click)="toggleMenu()" class="navbar-nav__menu">
+                <a class="nav-link">
+                    <svg viewBox="0 -15 56 56">
+                        <g>
+                            <path d="M0 0h56v9H0z" />
+                            <path d="M0 20h56v9H0z" />
+                        </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="menu-wrapper">
+        <div class="menu-nav">
+            <ul>
+                <li data-text="Home"><a (click)="toggleMenu()" routerLink="/">Home</a></li>
+                <li data-text="About"><a (click)="toggleMenu()" routerLink="/">About</a></li>
+                <li data-text="Skills"><a (click)="toggleMenu()" routerLink="/">Skills</a></li>
+                <li data-text="Services"><a (click)="toggleMenu()" routerLink="/">Services</a></li>
+                <li data-text="Contact"><a (click)="toggleMenu()" routerLink="/contact">Contact</a></li>
+                <li data-text="()!#$&"><a (click)="toggleMenu()" routerLink="/404">404</a></li>
+            </ul>
+        </div>
+        <div class="extra-nav">
+            <ul>
+                <li class="nav-link">
+                    <a href="https://www.facebook.com/irejimyu">
+                        <svg viewBox="0 0 512 512">
+                            <path
+                                d="M452 0H60C26.916 0 0 26.916 0 60v392c0 33.084 26.916 60 60 60h392c33.084 0 60-26.916 60-60V60c0-33.084-26.916-60-60-60zm20 452c0 11.028-8.972 20-20 20H338V309h61.79L410 247h-72v-43c0-16.975 13.025-30 30-30h41v-62h-41c-50.923 0-91.978 41.25-91.978 92.174V247H216v62h60.022v163H60c-11.028 0-20-8.972-20-20V60c0-11.028 8.972-20 20-20h392c11.028 0 20 8.972 20 20v392z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="https://www.instagram.com/irejimyu">
+                        <svg viewBox="0 0 512 512">
+                            <path
+                                d="M363.273 0H148.728C66.719 0 0 66.719 0 148.728v214.544C0 445.281 66.719 512 148.728 512h214.544C445.281 512 512 445.281 512 363.273V148.728C512 66.719 445.281 0 363.273 0zM472 363.272C472 423.225 423.225 472 363.273 472H148.728C88.775 472 40 423.225 40 363.273V148.728C40 88.775 88.775 40 148.728 40h214.544C423.225 40 472 88.775 472 148.728v214.544z" />
+                            <path
+                                d="M256 118c-76.094 0-138 61.906-138 138s61.906 138 138 138 138-61.906 138-138-61.906-138-138-138zm0 236c-54.037 0-98-43.963-98-98s43.963-98 98-98 98 43.963 98 98-43.963 98-98 98z" />
+                            <circle cx="396" cy="116" r="20" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="theme">
+                    <input type="checkbox" [(ngModel)]="isDarkmode" (change)="toggleTheme(isDarkmode)">
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="curtain"></div>

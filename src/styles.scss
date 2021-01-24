@@ -1,9 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
-html,
-body {
-  background-color: rgb(230, 230, 230);
-  font-family: 'IBM Plex Sans', sans-serif;
-  // cursor: url("data:image/svg+xml,%0A%3Csvg width='8px' height='8px' viewBox='0 0 8 8' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Ccircle id='Cerce' fill='%23333333' cx='4' cy='4' r='4'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E"), pointer;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+:root {
+  --clr-font: #212121;
+  --clr-bg: #fcfcfc;
+  --clr-primary: #646464;
+  --clr-p-light: #a1a3a4;
+  --clr-p-dark: #0b222c;
+  --clr-secondary: #f9aa33;
+  --clr-s-light: #ffdc65;
+  --clr-s-dark: #c17b00;
+
+  --transition-fast: 0.3s;
+  --transition-slow: 0.8s;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root[data-theme='dark'] {
+//     --clr-font: #ebebeb;
+//     --clr-bg: #0f1420;
+//     --clr-primary: #424242;
+//     --clr-p-light: #6d6d6d;
+//     --clr-p-dark: #1b1b1b;
+//     --clr-secondary: #ab47bc;
+//     --clr-s-light: #df78ef;
+//     --clr-s-dark: #790e8b;
+//   }
+// }
+
+
+:root[data-theme='dark'] {
+  --clr-font: #d3d3d3;
+  --clr-bg: #212121;
+  --clr-primary: #424242;
+  --clr-p-light: #6d6d6d;
+  --clr-p-dark: #1b1b1b;
+  --clr-secondary: #ab47bc;
+  --clr-s-light: #df78ef;
+  --clr-s-dark: #790e8b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   cursor: none;
-  font-size: 100%;
+}
+
+html {}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-bg);
+  color: var(--clr-font);
+  font-family: 'Poppins', sans-serif;
+}
+
+// ::-webkit-scrollbar {
+//   width: 0.8rem;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: var(--clr-p-light);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: var(--clr-s-light);
+// }
+
+h1 {
+  text-shadow: -1px 1px 1px var(--clr-secondary);
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
 }

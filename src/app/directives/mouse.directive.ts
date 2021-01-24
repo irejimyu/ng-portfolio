@@ -10,12 +10,14 @@ export class MouseDirective {
     private renderer: Renderer2,
   ) { }
 
-
-  @HostListener("document:scroll", ["$event"])
   @HostListener("document:mousemove", ["$event"])
   onMousemove(e) {
-    this.renderer.setStyle(this.elementRef.nativeElement, 'top', `${e.pageY - scrollY}px`);
-    this.renderer.setStyle(this.elementRef.nativeElement, 'left', `${e.pageX - scrollX}px`);
-    this.renderer.removeClass(this.elementRef.nativeElement, 'hidden')
+    const deviceType = navigator.userAgent;
+    if (!/Mobile|mobile/i.test(deviceType)) {
+      this.renderer.setStyle(this.elementRef.nativeElement, 'top', `${e.clientY}px`);
+      this.renderer.setStyle(this.elementRef.nativeElement, 'left', `${e.clientX}px`);
+      this.renderer.removeClass(this.elementRef.nativeElement, 'hidden')
+    }
   }
+  
 }

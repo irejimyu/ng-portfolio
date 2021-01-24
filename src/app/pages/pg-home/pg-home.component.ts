@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +9,19 @@ import { Router } from '@angular/router';
 })
 export class PgHomeComponent implements OnInit {
 
+  // themeForm: FormGroup;
+
   constructor(
-    private router: Router
+    // private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
-  }
+    // this.themeForm = this.fb.group({
+    //   theme: ['auto'],
+    // });
+    // this.themeForm.valueChanges.subscribe(res => {
+    //   console.log(res)
+    // })
 
-  sample() {
-    this.router.navigate(['sample123']);
   }
-
 }
